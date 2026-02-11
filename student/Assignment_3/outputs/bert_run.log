@@ -1,0 +1,78 @@
+
+========== Loading Dataset ==========
+Dataset loaded. Example: {'sentence': 'According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing .', 'label': 1}
+
+========== Preparing DataFrame ==========
+DataFrame shape: (4846, 3)
+
+========== Loading BERT Tokenizer & Model ==========
+
+========== Encoding Sentences ==========
+Input IDs shape: torch.Size([4846, 32]), y shape: (4846,)
+
+========== Splitting Data ==========
+Train: 3501, Val: 618, Test: 727
+DataLoaders created.
+
+========== Defining BERT Classifier ==========
+
+========== Setting Up Training ==========
+Using device: cuda
+Training setup complete.
+
+========== Starting Training Loop ==========
+
+--- Epoch 1/5 ---
+Train Loss: 0.7495, Train F1: 0.6257, Train Acc: 0.6521
+Val Loss: 0.4580, Val F1: 0.7515, Val Acc: 0.7686
+>>> Saved new best model (Val F1: 0.7515)
+
+--- Epoch 2/5 ---
+Train Loss: 0.4238, Train F1: 0.8028, Train Acc: 0.8178
+Val Loss: 0.3835, Val F1: 0.8297, Val Acc: 0.8544
+>>> Saved new best model (Val F1: 0.8297)
+
+--- Epoch 3/5 ---
+Train Loss: 0.2577, Train F1: 0.8863, Train Acc: 0.8940
+Val Loss: 0.3975, Val F1: 0.8246, Val Acc: 0.8398
+
+--- Epoch 4/5 ---
+Train Loss: 0.1617, Train F1: 0.9320, Train Acc: 0.9389
+Val Loss: 0.4808, Val F1: 0.8192, Val Acc: 0.8269
+
+--- Epoch 5/5 ---
+Train Loss: 0.0978, Train F1: 0.9635, Train Acc: 0.9686
+Val Loss: 0.4980, Val F1: 0.8342, Val Acc: 0.8544
+>>> Saved new best model (Val F1: 0.8342)
+
+========== Plotting Learning Curves ==========
+Learning curves saved as 'outputs/bert_f1_learning_curves.png'.
+Accuracy curve saved as 'outputs/bert_accuracy_learning_curve.png'.
+
+========== Evaluating on Test Set ==========
+
+==================================================
+Final Test Accuracy: 0.8294
+Test F1 Macro: 0.8087
+Test F1 Weighted: 0.8304
+==================================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+Negative (0)     0.7000    0.9231    0.7962        91
+ Neutral (1)     0.8951    0.8495    0.8717       432
+Positive (2)     0.7716    0.7451    0.7581       204
+
+    accuracy                         0.8294       727
+   macro avg     0.7889    0.8392    0.8087       727
+weighted avg     0.8360    0.8294    0.8304       727
+
+Confusion matrix saved as 'outputs/bert_confusion_matrix.png'.
+
+Per-class F1 Scores:
+Negative (0): 0.7962
+Neutral (1): 0.8717
+Positive (2): 0.7581
+
+========== Script Complete ==========

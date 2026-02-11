@@ -1,0 +1,35 @@
+
+========== Loading Dataset ==========
+Dataset loaded.
+
+========== Loading FastText ==========
+
+========== Splitting Data ==========
+
+========== Building Model ==========
+
+========== Preparing DataLoaders ==========
+
+========== Starting Training ==========
+
+========== Plotting Learning Curves ==========
+
+========== Evaluating on Test Set ==========
+
+==================================================
+Final Test Accuracy: 0.7153
+Test F1 Macro: 0.6757
+Test F1 Weighted: 0.7226
+==================================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+Negative (0)     0.5103    0.8132    0.6271        91
+ Neutral (1)     0.8656    0.7454    0.8010       432
+Positive (2)     0.5905    0.6078    0.5990       204
+
+    accuracy                         0.7153       727
+   macro avg     0.6555    0.7221    0.6757       727
+weighted avg     0.7439    0.7153    0.7226       727
+

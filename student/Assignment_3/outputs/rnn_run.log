@@ -1,0 +1,225 @@
+
+========== Loading Dataset ==========
+Dataset loaded. Example: {'sentence': 'According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing .', 'label': 1}
+
+========== Preparing DataFrame ==========
+DataFrame shape: (4846, 3)
+
+Sentence length statistics:
+count    4846.000000
+mean       23.101114
+std         9.958474
+min         2.000000
+25%        16.000000
+50%        21.000000
+75%        29.000000
+max        81.000000
+Name: sentence, dtype: float64
+
+========== Loading SentenceTransformer Model ==========
+Model loaded.
+
+========== Encoding Sentences as Sequences ==========
+X_seq shape: (4846, 32, 384), y shape: (4846,)
+
+========== Splitting Data ==========
+X_train shape: (3501, 32, 384), y_train shape: (3501,)
+X_val shape: (618, 32, 384), y_val shape: (618,)
+X_test shape: (727, 32, 384), y_test shape: (727,)
+DataLoaders created.
+
+========== Defining RNN Model ==========
+Model initialized with input_dim=384, hidden_dim=128, num_layers=2, num_classes=3
+
+========== Setting Up Training ==========
+Using device: cuda
+Training setup complete.
+
+========== Starting Training Loop ==========
+
+--- Epoch 1/30 ---
+Train Loss: 0.9086, Train F1: 0.5077, Train Acc: 0.5219
+Val Loss: 0.7771, Val F1: 0.5887, Val Acc: 0.5793
+Epoch 1/30: Train Loss: 0.9086 | Train F1: 0.5077 | Train Acc: 0.5219 | Val Loss: 0.7771 | Val F1: 0.5887 | Val Acc: 0.5793
+>>> Saved new best model (Val F1: 0.5887)
+
+--- Epoch 2/30 ---
+Train Loss: 0.7410, Train F1: 0.6371, Train Acc: 0.6481
+Val Loss: 0.7093, Val F1: 0.6527, Val Acc: 0.6828
+Epoch 2/30: Train Loss: 0.7410 | Train F1: 0.6371 | Train Acc: 0.6481 | Val Loss: 0.7093 | Val F1: 0.6527 | Val Acc: 0.6828
+>>> Saved new best model (Val F1: 0.6527)
+
+--- Epoch 3/30 ---
+Train Loss: 0.6758, Train F1: 0.6700, Train Acc: 0.6847
+Val Loss: 0.6878, Val F1: 0.6255, Val Acc: 0.6359
+Epoch 3/30: Train Loss: 0.6758 | Train F1: 0.6700 | Train Acc: 0.6847 | Val Loss: 0.6878 | Val F1: 0.6255 | Val Acc: 0.6359
+
+--- Epoch 4/30 ---
+Train Loss: 0.6293, Train F1: 0.6867, Train Acc: 0.7047
+Val Loss: 0.6405, Val F1: 0.6662, Val Acc: 0.6764
+Epoch 4/30: Train Loss: 0.6293 | Train F1: 0.6867 | Train Acc: 0.7047 | Val Loss: 0.6405 | Val F1: 0.6662 | Val Acc: 0.6764
+>>> Saved new best model (Val F1: 0.6662)
+
+--- Epoch 5/30 ---
+Train Loss: 0.5791, Train F1: 0.7057, Train Acc: 0.7195
+Val Loss: 0.6693, Val F1: 0.6901, Val Acc: 0.7201
+Epoch 5/30: Train Loss: 0.5791 | Train F1: 0.7057 | Train Acc: 0.7195 | Val Loss: 0.6693 | Val F1: 0.6901 | Val Acc: 0.7201
+>>> Saved new best model (Val F1: 0.6901)
+
+--- Epoch 6/30 ---
+Train Loss: 0.5585, Train F1: 0.7209, Train Acc: 0.7335
+Val Loss: 0.6850, Val F1: 0.6363, Val Acc: 0.6748
+Epoch 6/30: Train Loss: 0.5585 | Train F1: 0.7209 | Train Acc: 0.7335 | Val Loss: 0.6850 | Val F1: 0.6363 | Val Acc: 0.6748
+
+--- Epoch 7/30 ---
+Train Loss: 0.5465, Train F1: 0.7277, Train Acc: 0.7404
+Val Loss: 0.7699, Val F1: 0.5994, Val Acc: 0.6214
+Epoch 7/30: Train Loss: 0.5465 | Train F1: 0.7277 | Train Acc: 0.7404 | Val Loss: 0.7699 | Val F1: 0.5994 | Val Acc: 0.6214
+
+--- Epoch 8/30 ---
+Train Loss: 0.5240, Train F1: 0.7469, Train Acc: 0.7569
+Val Loss: 0.7324, Val F1: 0.6571, Val Acc: 0.6926
+Epoch 8/30: Train Loss: 0.5240 | Train F1: 0.7469 | Train Acc: 0.7569 | Val Loss: 0.7324 | Val F1: 0.6571 | Val Acc: 0.6926
+
+--- Epoch 9/30 ---
+Train Loss: 0.4878, Train F1: 0.7573, Train Acc: 0.7669
+Val Loss: 0.8767, Val F1: 0.6782, Val Acc: 0.7233
+Epoch 9/30: Train Loss: 0.4878 | Train F1: 0.7573 | Train Acc: 0.7669 | Val Loss: 0.8767 | Val F1: 0.6782 | Val Acc: 0.7233
+
+--- Epoch 10/30 ---
+Train Loss: 0.4264, Train F1: 0.7955, Train Acc: 0.8012
+Val Loss: 0.8056, Val F1: 0.6576, Val Acc: 0.6764
+Epoch 10/30: Train Loss: 0.4264 | Train F1: 0.7955 | Train Acc: 0.8012 | Val Loss: 0.8056 | Val F1: 0.6576 | Val Acc: 0.6764
+
+--- Epoch 11/30 ---
+Train Loss: 0.3894, Train F1: 0.8088, Train Acc: 0.8141
+Val Loss: 0.9607, Val F1: 0.6845, Val Acc: 0.7136
+Epoch 11/30: Train Loss: 0.3894 | Train F1: 0.8088 | Train Acc: 0.8141 | Val Loss: 0.9607 | Val F1: 0.6845 | Val Acc: 0.7136
+
+--- Epoch 12/30 ---
+Train Loss: 0.3453, Train F1: 0.8280, Train Acc: 0.8289
+Val Loss: 1.0086, Val F1: 0.6940, Val Acc: 0.7282
+Epoch 12/30: Train Loss: 0.3453 | Train F1: 0.8280 | Train Acc: 0.8289 | Val Loss: 1.0086 | Val F1: 0.6940 | Val Acc: 0.7282
+>>> Saved new best model (Val F1: 0.6940)
+
+--- Epoch 13/30 ---
+Train Loss: 0.3479, Train F1: 0.8344, Train Acc: 0.8386
+Val Loss: 1.0562, Val F1: 0.6788, Val Acc: 0.7039
+Epoch 13/30: Train Loss: 0.3479 | Train F1: 0.8344 | Train Acc: 0.8386 | Val Loss: 1.0562 | Val F1: 0.6788 | Val Acc: 0.7039
+
+--- Epoch 14/30 ---
+Train Loss: 0.3000, Train F1: 0.8583, Train Acc: 0.8609
+Val Loss: 1.0944, Val F1: 0.6665, Val Acc: 0.7006
+Epoch 14/30: Train Loss: 0.3000 | Train F1: 0.8583 | Train Acc: 0.8609 | Val Loss: 1.0944 | Val F1: 0.6665 | Val Acc: 0.7006
+
+--- Epoch 15/30 ---
+Train Loss: 0.2926, Train F1: 0.8583, Train Acc: 0.8618
+Val Loss: 1.0795, Val F1: 0.6658, Val Acc: 0.6893
+Epoch 15/30: Train Loss: 0.2926 | Train F1: 0.8583 | Train Acc: 0.8618 | Val Loss: 1.0795 | Val F1: 0.6658 | Val Acc: 0.6893
+
+--- Epoch 16/30 ---
+Train Loss: 0.2692, Train F1: 0.8668, Train Acc: 0.8692
+Val Loss: 1.2298, Val F1: 0.6621, Val Acc: 0.6926
+Epoch 16/30: Train Loss: 0.2692 | Train F1: 0.8668 | Train Acc: 0.8692 | Val Loss: 1.2298 | Val F1: 0.6621 | Val Acc: 0.6926
+
+--- Epoch 17/30 ---
+Train Loss: 0.2152, Train F1: 0.8994, Train Acc: 0.9006
+Val Loss: 1.4021, Val F1: 0.6809, Val Acc: 0.7168
+Epoch 17/30: Train Loss: 0.2152 | Train F1: 0.8994 | Train Acc: 0.9006 | Val Loss: 1.4021 | Val F1: 0.6809 | Val Acc: 0.7168
+
+--- Epoch 18/30 ---
+Train Loss: 0.1970, Train F1: 0.9002, Train Acc: 0.9035
+Val Loss: 1.3681, Val F1: 0.6794, Val Acc: 0.7104
+Epoch 18/30: Train Loss: 0.1970 | Train F1: 0.9002 | Train Acc: 0.9035 | Val Loss: 1.3681 | Val F1: 0.6794 | Val Acc: 0.7104
+
+--- Epoch 19/30 ---
+Train Loss: 0.1791, Train F1: 0.9119, Train Acc: 0.9132
+Val Loss: 1.4230, Val F1: 0.6538, Val Acc: 0.6845
+Epoch 19/30: Train Loss: 0.1791 | Train F1: 0.9119 | Train Acc: 0.9132 | Val Loss: 1.4230 | Val F1: 0.6538 | Val Acc: 0.6845
+
+--- Epoch 20/30 ---
+Train Loss: 0.1644, Train F1: 0.9208, Train Acc: 0.9246
+Val Loss: 1.5958, Val F1: 0.6592, Val Acc: 0.6942
+Epoch 20/30: Train Loss: 0.1644 | Train F1: 0.9208 | Train Acc: 0.9246 | Val Loss: 1.5958 | Val F1: 0.6592 | Val Acc: 0.6942
+
+--- Epoch 21/30 ---
+Train Loss: 0.1430, Train F1: 0.9333, Train Acc: 0.9337
+Val Loss: 1.5499, Val F1: 0.6690, Val Acc: 0.7023
+Epoch 21/30: Train Loss: 0.1430 | Train F1: 0.9333 | Train Acc: 0.9337 | Val Loss: 1.5499 | Val F1: 0.6690 | Val Acc: 0.7023
+
+--- Epoch 22/30 ---
+Train Loss: 0.1312, Train F1: 0.9370, Train Acc: 0.9397
+Val Loss: 1.6162, Val F1: 0.6619, Val Acc: 0.6926
+Epoch 22/30: Train Loss: 0.1312 | Train F1: 0.9370 | Train Acc: 0.9397 | Val Loss: 1.6162 | Val F1: 0.6619 | Val Acc: 0.6926
+
+--- Epoch 23/30 ---
+Train Loss: 0.1222, Train F1: 0.9404, Train Acc: 0.9429
+Val Loss: 1.6934, Val F1: 0.6533, Val Acc: 0.6909
+Epoch 23/30: Train Loss: 0.1222 | Train F1: 0.9404 | Train Acc: 0.9429 | Val Loss: 1.6934 | Val F1: 0.6533 | Val Acc: 0.6909
+
+--- Epoch 24/30 ---
+Train Loss: 0.1154, Train F1: 0.9453, Train Acc: 0.9477
+Val Loss: 1.7440, Val F1: 0.6683, Val Acc: 0.7055
+Epoch 24/30: Train Loss: 0.1154 | Train F1: 0.9453 | Train Acc: 0.9477 | Val Loss: 1.7440 | Val F1: 0.6683 | Val Acc: 0.7055
+
+--- Epoch 25/30 ---
+Train Loss: 0.1016, Train F1: 0.9527, Train Acc: 0.9546
+Val Loss: 1.7895, Val F1: 0.6536, Val Acc: 0.6909
+Epoch 25/30: Train Loss: 0.1016 | Train F1: 0.9527 | Train Acc: 0.9546 | Val Loss: 1.7895 | Val F1: 0.6536 | Val Acc: 0.6909
+
+--- Epoch 26/30 ---
+Train Loss: 0.0957, Train F1: 0.9561, Train Acc: 0.9586
+Val Loss: 1.8688, Val F1: 0.6665, Val Acc: 0.7023
+Epoch 26/30: Train Loss: 0.0957 | Train F1: 0.9561 | Train Acc: 0.9586 | Val Loss: 1.8688 | Val F1: 0.6665 | Val Acc: 0.7023
+
+--- Epoch 27/30 ---
+Train Loss: 0.0924, Train F1: 0.9577, Train Acc: 0.9609
+Val Loss: 1.8783, Val F1: 0.6729, Val Acc: 0.7087
+Epoch 27/30: Train Loss: 0.0924 | Train F1: 0.9577 | Train Acc: 0.9609 | Val Loss: 1.8783 | Val F1: 0.6729 | Val Acc: 0.7087
+
+--- Epoch 28/30 ---
+Train Loss: 0.0899, Train F1: 0.9588, Train Acc: 0.9609
+Val Loss: 1.8779, Val F1: 0.6690, Val Acc: 0.7023
+Epoch 28/30: Train Loss: 0.0899 | Train F1: 0.9588 | Train Acc: 0.9609 | Val Loss: 1.8779 | Val F1: 0.6690 | Val Acc: 0.7023
+
+--- Epoch 29/30 ---
+Train Loss: 0.0830, Train F1: 0.9603, Train Acc: 0.9632
+Val Loss: 1.8909, Val F1: 0.6610, Val Acc: 0.6942
+Epoch 29/30: Train Loss: 0.0830 | Train F1: 0.9603 | Train Acc: 0.9632 | Val Loss: 1.8909 | Val F1: 0.6610 | Val Acc: 0.6942
+
+--- Epoch 30/30 ---
+Train Loss: 0.0749, Train F1: 0.9646, Train Acc: 0.9666
+Val Loss: 1.9167, Val F1: 0.6678, Val Acc: 0.7006
+Epoch 30/30: Train Loss: 0.0749 | Train F1: 0.9646 | Train Acc: 0.9666 | Val Loss: 1.9167 | Val F1: 0.6678 | Val Acc: 0.7006
+
+========== Plotting Learning Curves ==========
+Learning curves saved as 'outputs/rnn_f1_learning_curves.png'.
+Accuracy curve saved as 'outputs/rnn_accuracy_learning_curve.png'.
+
+========== Evaluating on Test Set ==========
+
+==================================================
+Final Test Accuracy: 0.7276
+Test F1 Macro: 0.7001
+Test F1 Weighted: 0.7300
+==================================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+Negative (0)     0.6250    0.7692    0.6897        91
+ Neutral (1)     0.8189    0.7639    0.7904       432
+Positive (2)     0.6085    0.6324    0.6202       204
+
+    accuracy                         0.7276       727
+   macro avg     0.6841    0.7218    0.7001       727
+weighted avg     0.7356    0.7276    0.7300       727
+
+Confusion matrix saved as 'outputs/rnn_confusion_matrix.png'.
+
+Per-class F1 Scores:
+Negative (0): 0.6897
+Neutral (1): 0.7904
+Positive (2): 0.6202
+
+========== Script Complete ==========

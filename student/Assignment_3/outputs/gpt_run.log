@@ -1,0 +1,78 @@
+
+========== Loading Dataset ==========
+Dataset loaded. Example: {'sentence': 'According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing .', 'label': 1}
+
+========== Preparing DataFrame ==========
+DataFrame shape: (4846, 3)
+
+========== Loading GPT-2 Tokenizer & Model ==========
+
+========== Encoding Sentences ==========
+Input IDs shape: torch.Size([4846, 32]), y shape: (4846,)
+
+========== Splitting Data ==========
+Train: 3501, Val: 618, Test: 727
+DataLoaders created.
+
+========== Setting Up Training ==========
+Using device: cuda
+Training setup complete.
+
+========== Starting Training Loop ==========
+
+--- Epoch 1/5 ---
+Train Loss: 0.9763, Train F1: 0.4283, Train Acc: 0.6107
+Val Loss: 0.7121, Val F1: 0.4862, Val Acc: 0.6877
+>>> Saved new best model (Val F1: 0.4862)
+
+--- Epoch 2/5 ---
+Train Loss: 0.6487, Train F1: 0.5865, Train Acc: 0.7152
+Val Loss: 0.5532, Val F1: 0.7200, Val Acc: 0.7799
+>>> Saved new best model (Val F1: 0.7200)
+
+--- Epoch 3/5 ---
+Train Loss: 0.4796, Train F1: 0.7769, Train Acc: 0.8161
+Val Loss: 0.4236, Val F1: 0.7850, Val Acc: 0.8285
+>>> Saved new best model (Val F1: 0.7850)
+
+--- Epoch 4/5 ---
+Train Loss: 0.3646, Train F1: 0.8313, Train Acc: 0.8583
+Val Loss: 0.3753, Val F1: 0.8010, Val Acc: 0.8350
+>>> Saved new best model (Val F1: 0.8010)
+
+--- Epoch 5/5 ---
+Train Loss: 0.2864, Train F1: 0.8704, Train Acc: 0.8892
+Val Loss: 0.3813, Val F1: 0.8270, Val Acc: 0.8511
+>>> Saved new best model (Val F1: 0.8270)
+
+========== Plotting Learning Curves ==========
+Learning curves saved as 'outputs/gpt_f1_learning_curves.png'.
+Accuracy curve saved as 'outputs/gpt_accuracy_learning_curve.png'.
+
+========== Evaluating on Test Set ==========
+
+==================================================
+Final Test Accuracy: 0.8239
+Test F1 Macro: 0.8012
+Test F1 Weighted: 0.8229
+==================================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+Negative (0)     0.8022    0.8022    0.8022        91
+ Neutral (1)     0.8600    0.8819    0.8709       432
+Positive (2)     0.7513    0.7108    0.7305       204
+
+    accuracy                         0.8239       727
+   macro avg     0.8045    0.7983    0.8012       727
+weighted avg     0.8223    0.8239    0.8229       727
+
+Confusion matrix saved as 'outputs/gpt_confusion_matrix.png'.
+
+Per-class F1 Scores:
+Negative (0): 0.8022
+Neutral (1): 0.8709
+Positive (2): 0.7305
+
+========== Script Complete ==========
